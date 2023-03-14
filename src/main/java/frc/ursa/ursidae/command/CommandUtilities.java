@@ -12,7 +12,7 @@ public class CommandUtilities {
         CommandScheduler cs = CommandScheduler.getInstance();
         cs.onCommandInitialize((c) -> {
             if (!commandStates.containsKey(c)) {
-                commandStates.put(c, new HashMap<>());
+                createEntry(c);
             }
             HashMap<String, Boolean> states = commandStates.get(c);
             states.put("Initialize", true);
@@ -21,7 +21,7 @@ public class CommandUtilities {
         });
         cs.onCommandExecute((c) -> {
             if (!commandStates.containsKey(c)) {
-                commandStates.put(c, new HashMap<>());
+                createEntry(c);
             }
             HashMap<String, Boolean> states = commandStates.get(c);
             states.put("Initialize", false);
@@ -30,7 +30,7 @@ public class CommandUtilities {
         });
         cs.onCommandFinish((c) -> {
             if (!commandStates.containsKey(c)) {
-                commandStates.put(c, new HashMap<>());
+                createEntry(c);
             }
             HashMap<String, Boolean> states = commandStates.get(c);
             states.put("Initialize", false);
