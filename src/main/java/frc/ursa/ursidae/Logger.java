@@ -1,7 +1,6 @@
 package frc.ursa.ursidae;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.ursa.ursidae.command.CommandUtilities;
 /**
  * Logging utilities
  */

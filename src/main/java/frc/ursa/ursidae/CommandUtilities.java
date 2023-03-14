@@ -1,4 +1,4 @@
-package frc.ursa.ursidae.command;
+package frc.ursa.ursidae;
 
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
